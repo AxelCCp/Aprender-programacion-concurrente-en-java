@@ -1,0 +1,45 @@
+package com.hilos;
+
+import java.util.Random;
+
+//Bloque 2.3
+public class A5_MedirTiempoConcurrenciaMatriz extends Thread{
+
+
+	public static void main(String[] args) {
+		Random random = new Random(System.nanoTime());
+		
+		for(int i=0; i<matriz.length; i++) {
+			for(int j=0; j<matriz[0].length; j++) {
+				matriz[i][j] = random.nextInt(10);
+			}
+		}
+		
+		A5_MedirTiempoConcurrenciaMatriz h1 = new A5_MedirTiempoConcurrenciaMatriz(0,2);      //toma las filas 0 y 1 
+		A5_MedirTiempoConcurrenciaMatriz h2 = new A5_MedirTiempoConcurrenciaMatriz(2,4);      //toma las filas 2 y 3
+		
+		h1.start();
+		h2.start();
+	}
+	
+	
+	public A5_MedirTiempoConcurrenciaMatriz(int inicio, int fin){
+		this.inicio = inicio;
+		this.fin = fin;
+	}
+	
+	public void run() {
+		for(int i=inicio; i<fin; i++) {
+			for(int j=0; j<matriz[0].length; j++) {
+				matriz[i][j] *= 10;
+			}
+		}
+	}
+	
+	
+	private static int tam = 4;
+	private static int [][]matriz = new int[tam][tam];
+	private int inicio, fin;
+	
+	
+}

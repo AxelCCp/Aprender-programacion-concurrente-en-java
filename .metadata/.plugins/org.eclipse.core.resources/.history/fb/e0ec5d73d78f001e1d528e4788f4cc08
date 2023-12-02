@@ -1,0 +1,56 @@
+package com.hilos;
+
+
+//Bloque 3.1 - generando hilos con runnable.
+
+public class A7_Runnable_Syncronized implements Runnable{
+
+	@Override
+	public void run() {
+		System.out.println("Hola");
+		
+	}
+	
+	/* Código para generar 1 hilo
+	 *  
+	public static void main(String[] args) {
+		
+		Runnable runnable = new A7_Runnable_Syncronized();
+		Thread hilo1 = new Thread(runnable);
+		hilo1.start();
+		
+		try {
+			hilo1.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	*/
+	
+	
+	/* Código para generar hilos con un vector 
+	 */
+	public static void main(String[] args) {
+		
+		Thread[]hilos = new Thread[2];
+		
+		for(int i=0; i<hilos.length; i++) {
+			hilos[i] = new Thread(new A7_Runnable_Syncronized());
+			hilos[i].start();	
+		}
+		
+		for(int i=0; i<hilos.length; i++) {
+			try {
+				hilos[i].join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
+	
+
+}

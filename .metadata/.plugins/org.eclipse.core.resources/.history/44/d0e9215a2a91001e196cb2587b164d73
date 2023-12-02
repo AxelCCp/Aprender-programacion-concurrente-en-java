@@ -1,0 +1,56 @@
+package com.hilos;
+
+public class A8_CondicionDeGuardaWaitNotifyall implements Runnable {
+	
+	public static void main(String[] args) {
+		
+		Runtime runtime = Runtime.getRuntime();
+		
+		int nucleos = runtime.availableProcessors();
+		
+		Thread[]hilos = new Thread[nucleos];
+		
+		for(int i=0; i<hilos.length; i++) {
+			
+			//hilos[i] = new Thread(new A7_Runnable_Syncronized());				//manera 1
+			
+			Runnable runnable = new A7_Runnable_Syncronized();                  //manera 2
+			hilos[i] = new Thread(runnable);                                    //manera 2
+			
+			hilos[i].start();	
+		}
+		
+		for(int i=0; i<hilos.length; i++) {
+			
+			try {
+				hilos[i].join();
+			} catch (InterruptedException e) {		
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}	
+			
+		}
+		
+		System.out.println("Soy el hilo principal....");
+	}
+
+	
+	@Override
+	public void run() {
+		
+		synchronized (object) {		
+			
+			for(int i=0; i<20000;i++) {
+				cont++;
+			}
+			
+		}
+		
+	}
+
+	
+	private static int cont = 0; 
+	private static Object object = new Object();
+
+
+}

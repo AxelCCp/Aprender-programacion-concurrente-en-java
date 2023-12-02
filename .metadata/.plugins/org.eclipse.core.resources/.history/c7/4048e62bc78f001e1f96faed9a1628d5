@@ -1,0 +1,35 @@
+package com.hilos;
+
+import java.util.Random;
+
+//Bloque 2.3
+public class A5_MedirTiempoConcurrenciaMatriz {
+
+
+	public static void main(String[] args) {
+		Random random = new Random(System.nanoTime());
+		
+		for(int i=0; i<matriz.length; i++) {
+			for(int j=0; j<matriz.length; j++) {
+				matriz[i][j] = random.nextInt(10);
+			}
+		}
+		
+		A5_MedirTiempoConcurrenciaMatriz h1 = new A5_MedirTiempoConcurrenciaMatriz();
+		A5_MedirTiempoConcurrenciaMatriz h2 = new A5_MedirTiempoConcurrenciaMatriz();
+
+	}
+	
+	
+	public A5_MedirTiempoConcurrenciaMatriz(int inicio, int fin){
+		this.inicio = inicio;
+		this.fin = fin;
+	}
+	
+	
+	private static int tam = 4;
+	private static int [][]matriz = new int[tam][tam];
+	private int inicio, fin;
+	
+	
+}

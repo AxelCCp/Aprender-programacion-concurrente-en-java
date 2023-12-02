@@ -1,0 +1,7 @@
+package com.hilos;
+
+//Bloque 2.4
+//Código que se adapta a la cantidad de nucleos q tenga una CPU
+public class A6_NumeroDeHilosDinamico {
+
+}
