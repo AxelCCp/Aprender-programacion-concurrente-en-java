@@ -1,0 +1,39 @@
+package com.hilos11.ConditionReentrantLock;
+
+import java.util.Random;
+
+public class B9_Principal {
+
+	public static void main(String[] args) {
+
+		Random random = new Random(System.nanoTime());
+		
+		Thread[]vec = new Thread[30];
+		
+		for(int i=0; i<vec.length; i++) {
+			
+			int intencion = random.nextInt();
+			
+			B9_Avion avion = new B9_Avion(i, intencion);
+		
+			Runnable runnable = new B9_Aeropuerto(avion);
+			
+			vec[i] = new Thread();
+			
+			vec[i].start();
+		}
+			
+			try {
+				
+				for(int i=0; i<vec.length; i++) {
+				
+					vec[i].join();
+					
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		
+	}
+}

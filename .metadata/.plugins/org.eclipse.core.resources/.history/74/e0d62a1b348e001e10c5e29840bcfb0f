@@ -1,5 +1,0 @@
-package com.hilos;
-
-public class A1_LanzandoHilos extends Thread{
-
-}

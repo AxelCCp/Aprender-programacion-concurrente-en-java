@@ -4,9 +4,25 @@
     <fullyQualifiedTypeName name="com.hilos.A2_Join_HilosDesdeVector"/>
     <fullyQualifiedTypeName name="com.hilos.A3_Indeterminismo"/>
     <fullyQualifiedTypeName name="com.hilos.A4_Solucion_Indeterminismo"/>
-    <fullyQualifiedTypeName name="java.lang.Runtime"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="com.hilos.monitor.B1_Monitor"/>
+    <fullyQualifiedTypeName name="java.lang.Runtime"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.CyclicBarrier"/>
+    <fullyQualifiedTypeName name="com.hilos5.CyclicBarrier.B3_Carrera"/>
+    <fullyQualifiedTypeName name="com.hilos6.MonitorBuffer.B4_Buffer"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ExecutorService"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
+    <fullyQualifiedTypeName name="com.hilos6.MonitorBuffer.B4_Principal"/>
+    <fullyQualifiedTypeName name="com.hilos8.TiposAtomicos.B6_Synchro"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicInteger"/>
+    <fullyQualifiedTypeName name="com.hilos9.ReentrantLock.B7_Reentrant"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="com.hilos10.Condition.B8_Buffer"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="com.practices1.A0_Intro"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="com.hilos11.ConditionReentrantLock.B9_Avion"/>
     <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantLock"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.locks.Condition"/>
 </qualifiedTypeNameHistroy>

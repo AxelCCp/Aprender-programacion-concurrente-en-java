@@ -1,0 +1,30 @@
+package com.hilos11.ConditionReentrantLock;
+
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class B9_Aeropuerto implements Runnable{
+	
+	private B9_Avion avion;
+	private static int contDespegar = 0;
+	
+	private static ReentrantLock lock = new ReentrantLock();
+	private static Condition despegar = lock.newCondition();
+	private static  Condition aparcamiento = lock.newCondition();
+	
+	public B9_Aeropuerto(B9_Avion avion) {
+		this.avion = avion;
+	}
+
+	@Override
+	public void run() {
+		
+		
+	}
+	
+	
+	public void await(Condition condition) {
+		
+	}
+
+}
